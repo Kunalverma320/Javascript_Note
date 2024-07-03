@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append</title>
+</head>
+<body>
+
+    <p id="pid">LOCAL PARAGRAPH</p>
+
+    <script>
+        let btn=document.createElement("button");
+        btn.innerText="Click Me";
+        btn.style.backgroundColor="red";
+        btn.style.color="white";
+        btn.style.padding="8px 16px";
+        let body=document.querySelector("body");
+        body.append(btn);
+
+        let pid=document.querySelector("p");
+        pid.remove();
+
+
+    </script>
+</body>
+</html>

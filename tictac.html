@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <style>*{
+	margin: 0;
+	padding: 0;
+}
+
+.row {
+	text-align: center;
+}
+
+.box {
+	display: flex;
+	min-width: 100px;
+	gap: 1.8vh;
+	margin: 10px 0 auto;
+	
+}
+.btn {
+    width: 60px;
+    height: 60px;
+}
+.boxes {
+    display: inline-table;
+}</style>
+    <title>Tic tac Toe</title>
+</head>
+<body>
+    <div class="container main-section">
+        <div class="row">
+            <div class="boxes">
+                <div class="box">
+                    <button class="btn" id="btn1"></button>
+                    <button class="btn" id="btn2"></button>
+                    <button class="btn" id="btn3"></button>
+                </div>
+                <div class="box">
+                    <button class="btn" id="btn4"></button>
+                    <button class="btn" id="btn5"></button>
+                    <button class="btn" id="btn6"></button>
+                </div>
+                <div class="box">
+                    <button class="btn" id="btn7"></button>
+                    <button class="btn" id="btn8"></button>
+                    <button class="btn" id="btn9"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    let first="x";
+    const checkindexes=[
+      
+    ];
+    document.querySelectorAll(".btn").forEach(btn => {
+        btn.addEventListener("click", function() {
+        if(first)
+            {
+                this.innerText = "x";
+            }
+            else
+            {
+                this.innerText = "o";
+
+            }
+            first=!first;
+
+                });
+            });
+
+            checkindexes();
+});
+
+    </script>
+</body>
+</html>

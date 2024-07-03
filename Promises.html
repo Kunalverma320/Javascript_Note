@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises</title>
+</head>
+<body>
+    <h1>Promises</h1>
+    <li>it is a solution of callback hell</li>
+    <li>promises is for eventual completion of task . it is an object of js</li>
+    <li>let promises=new Promise((resolve,reject)=>{...})</li>
+    <li>then ka use promises success hone par show karane ke liye hota hai</li>
+    <li>catch ka use promises reject hone par error msg show karane ke liye hota hai</li>
+    <script>
+
+//promise 
+
+        // let promes=new Promise((resolve ,reject) =>{
+        //     console.log("promises start");
+        //     // resolve("sucess");
+        //     reject("not fill");
+        // });
+        // console.log(promes);
+
+        // function getData(dataId,getNextData)
+        // {
+        //     return new Promise((resolve,reject)=>{
+        //          setTimeout(() => {
+        //         console.log("data",dataId);
+        //         resolve("success");
+        //         if(getNextData)
+        //         {
+        //             getNextData();
+        //         }
+        //     }, 2000);
+        //     }); 
+        // }
+
+        // function getData(){
+        //    return new Promise((resolve,reject)=>{
+        //         console.log("data showing");
+        //         // resolve("success");
+        //         reject("error");
+        //     })
+        // }
+        // let result=new getData();
+        // result.then((res)=>{
+        //     console.log("promise fulfill",res);
+        // });
+        // result.catch((err)=>{
+        //     console.log("error",err);
+        // })
+        // console.log(result);
+
+
+        //promise chain asynFucn exm1
+
+        // function asynFucn(){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(()=> {
+        //             console.log("data showing 1");
+        //             // resolve("success");
+        //             reject("error");
+
+        //         },2000);
+                
+        //     });
+        // }
+
+
+        // function asynFucn1(){
+        //     return new Promise((resolve,reject) =>{
+        //         setTimeout(()=>{
+        //             console.log("data showiing 2");
+        //             resolve("success");
+        //         },4000);
+        //     })
+        // }
+
+
+        // let result=new asynFucn();
+        // result.then((res)=>{
+        //     console.log("approve",res);
+        //     let result1=new asynFucn1();
+        //     result1.then((res)=>{
+        //         console.log("approve1",res);
+        //     });
+        // });
+
+        // console.log(result);
+
+        //promise chain asynFucn exm2
+
+        // function getData(dataId){
+        //     return new Promise((resolve,reject)=>{
+        //         setTimeout(() => {
+        //             console.log("data",dataId);
+        //             resolve("sucess");
+        //         }, 2000);
+        //     });
+        // }
+
+        // getData(1)
+        // .then((res)=>{
+        //     return getData(2);
+        // })
+        // .then((res)=>{
+        //     return getData(3);
+        // })
+        
+        
+        
+
+    </script>
+</body>
+</html>

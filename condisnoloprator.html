@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Practice</title>
+</head>
+
+<body>
+
+
+    <h1>operator</h1>
+
+    <p>
++   Addition
+<br>
+-	Subtraction
+<br>
+*	Multiplication
+<br>
+
+**	Exponentiation (ES2016)
+<br>
+
+/	Division
+<br>
+
+%	Modulus (Division Remainder)
+<br>
+
+++	Increment
+<br>
+
+--	Decrement
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <p>a=10</p>
+    <p>b=15</p>
+    <p>When 
+        a+b
+   <br>
+        a-b
+   <br>
+
+        a*b
+   <br>
+
+        a%b
+   <br>
+
+        a/b</p>
+
+    <p>c=?</p>
+    <input type="number" value="10" id="firsta" hidden>
+    <input type="number" value="15" id="secondb" hidden>
+
+
+    <p>a+b</p>
+    <input type="text" id="firstans" placeholder="Enter your answer">
+    <p id="firstp"></p>
+
+
+    <p>a-b</p>
+    <input type="text" id="secondans" placeholder="Enter your answer">
+
+    <p>a*b</p>
+    <input type="text" id="thirdans" placeholder="Enter your answer">
+
+    <p>a%b</p>
+    <input type="text" id="fourthans" placeholder="Enter your answer">
+
+    <p>a/b</p>
+    <input type="text" id="fifthans" placeholder="Enter your answer">
+
+
+    <script>
+
+document.addEventListener('DOMContentLoaded',(event)=>{
+
+const firsta=document.getElementById('firsta').value;
+const secondb=document.getElementById('secondb').value;
+
+document.getElementById('firstans').addEventListener('keyup',function()
+{
+    firstvalue=document.getElementById('firstans').value;
+
+    var fianlvalue=firsta + secondb;
+    console.log(fianlvalue);
+
+    if(firstvalue === fianlvalue)
+    {
+        document.getElementById('firstp').textContent=`Correct Ans ${fianlvalue}`;
+    }else
+    {
+        document.getElementById('firstp').textContent=`Wrong Ans ${firstvalue}`;
+
+    }
+
+});
+
+
+});
+
+    </script>
+
+
+
+</body>
+
+</html>

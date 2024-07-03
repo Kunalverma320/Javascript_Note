@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persantage Calculator</title>
+</head>
+
+<body>
+    <label for="first-input">English</label>
+    <input type="number" id="English" placeholder="Enter Marks Of English">
+    <br>
+    <label for="first-input">Hindi</label>
+    <input type="number" id="Hindi" placeholder="Enter Marks Of Hindi">
+    <br>
+    <label for="first-input">Maths</label>
+    <input type="number" id="Maths" placeholder="Enter Marks Of Maths">
+    <br>
+    <label for="first-input">Bio</label>
+    <input type="number" id="Bio" placeholder="Enter Marks Of Bio">
+    <br>
+    <label for="first-input">Physics</label>
+    <input type="number" id="Physics" placeholder="Enter Marks Of Physics">
+    <br>
+    <button id="calculate">Calculate</button>
+<br>
+<br>
+<label for="">Ans</label>
+    <input type="text" id="ansprint">
+</body>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',()=>{
+        const calculatebutton=document.getElementById('calculate');
+
+        calculatebutton.addEventListener('click',()=>{
+            let English=parseFloat(document.getElementById('English').value);
+            let Hindi=parseFloat(document.getElementById('Hindi').value);
+            let Maths=parseFloat(document.getElementById('Maths').value);
+            let Bio=parseFloat(document.getElementById('Bio').value);
+            let Physics=parseFloat(document.getElementById('Physics').value);
+
+            let total=English + Hindi + Maths + Bio + Physics;
+            let percentage =total/5;
+         
+            document.getElementById('ansprint').value = `${percentage}%`;
+
+            console.log(percentage );
+
+          
+        });
+
+    });
+   
+</script>
+
+</html>

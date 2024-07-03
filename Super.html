@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super</title>
+</head>
+<body>
+    <h1>parent class ke constructor to get kerne ke liye super keyword ka use krte hai</h1>
+    <script>
+        class person
+        {
+            constructor()
+            {
+                this.species="homo sempeins";
+            }
+            name(name)
+            {
+                this.name=name;
+            }
+        }
+        class engineer extends person
+        {
+            constructor(salary)
+            {
+                super();
+                this.salary=salary;
+            }
+            start()
+            {
+                console.log("start");
+            }
+        }
+        var objeng=new engineer("1000");
+        objeng.name="kunal";
+    </script>
+</body>
+</html>

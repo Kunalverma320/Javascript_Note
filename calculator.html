@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Practice</title>
+</head>
+
+<body>
+    <label for="first-input">A</label>
+    <input type="number" id="vala" placeholder="Enter Value Of A">
+    <br>
+    <label for="first-input">B</label>
+    <input type="number" id="valb" placeholder="Enter Value Of B">
+    <br>
+    <label for="add">A+B</label>
+    <input type="radio" name="operation" id="add">
+    <br>
+    <label for="subtract">A-B</label>
+    <input type="radio" name="operation" id="subtract">
+    <br>
+    <label for="multiply">A*B</label>
+    <input type="radio" name="operation" id="multiply">
+    <br>
+    <label for="divide">A/B</label>
+    <input type="radio" name="operation" id="divide">
+    <br>
+    <br>
+    <button id="calculate">Calculate</button>
+    <br>
+    <br>
+    <label for="Ans">Ans Is</label>
+    <input type="text" id="ans" disabled>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const calculateButton = document.getElementById('calculate');
+            calculateButton.addEventListener('click', () => {
+                const vala = parseFloat(document.getElementById('vala').value);
+                const valb = parseFloat(document.getElementById('valb').value);
+                let result;
+
+                if (isNaN(vala) || isNaN(valb)) {
+                    alert('Please enter valid numbers for A and B.');
+                    return;
+                }
+
+                const addCheckbox = document.getElementById('add');
+                const subtractCheckbox = document.getElementById('subtract');
+                const multiplyCheckbox = document.getElementById('multiply');
+                const divideCheckbox = document.getElementById('divide');
+
+                if (addCheckbox.checked) {
+                    result = vala + valb;
+                } else if (subtractCheckbox.checked) {
+                    result = vala - valb;
+                } else if (multiplyCheckbox.checked) {
+                    result = vala * valb;
+                } else if (divideCheckbox.checked) {
+                    if (valb === 0) {
+                        alert('Cannot divide by zero.');
+                        return;
+                    }
+                    result = vala / valb;
+                } else {
+                    alert('Please select an operation.');
+                    return;
+                }
+
+                document.getElementById('ans').value = result;
+            });
+        });
+    </script>
+</body>
+
+</html>

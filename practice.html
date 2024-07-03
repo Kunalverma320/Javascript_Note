@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice que</title>
+</head>
+<body>
+    <script>
+        // let data="welcome to collage site";
+       
+        // class user{
+        //     constructor(name,email)
+        //     {
+        //         this.name=name;
+        //         this.email=email;
+        //     }
+        //     viewData()
+        //     {
+        //         console.log("data",data);
+        //     }
+        // }
+        // var student1=new user("kunal","k@gmail");
+        // var student1=new user("kiwi","kiwi@gmail");
+
+
+let data="secrect information"
+        class user{
+            constructor(name,email)
+            {
+                this.name=name;
+                this.email=email;
+            }
+            viewData()
+            {
+                console.log("data",data);
+            }
+        }
+        class Admin extends user{
+            constructor(name,email)
+            {
+                super(name,email);
+            }
+            editData()
+            {
+                data="some new value";
+            }
+        }
+
+        var admin=new Admin("admin","admin@gmail.com");
+
+    </script>
+</body>
+</html>

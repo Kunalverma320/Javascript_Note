@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with argument and callback hell</title>
+
+</head>
+<body>
+    <h1>callback hell</h1>
+    <li>Is a problem nexted callback stacks below one another forming pyramid structure</li>
+    <li>problem this style of programing difficult to understand</li>
+    
+    <script>
+        // function sum(a,b)
+        // {
+        //     console.log(a+b);
+        // }
+        // function calculator(a,b, sumCallback){
+        //     sumCallback(a,b);
+        // }
+        // calculator(1,2,sum);
+
+        function getData(dataId, getNextData)
+        {
+            setTimeout(() => {
+                console.log("data",dataId);
+                if(getNextData)
+                {
+                     getNextData();
+                }
+               
+            }, 2000);
+        }
+        getData(1,()=>{
+            getData(2,()=>{
+                getData(3,() => {
+                    getData(4);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

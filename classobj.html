@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASS OBJECT</title>
+</head>
+<body>
+    <script>
+        class car{
+
+            constructor(){
+                console.log("constractor start");
+            }
+
+            color()
+            {
+                console.log("blue");
+            }
+
+            start() {
+                console.log("start");
+            }
+            stop() {
+                console.log("stop");
+            }
+
+            setbrand(brand)
+            {
+                this.brandname=brand;
+            }
+        }
+        var audi=new car;
+        // audi.setbrand("audi");
+    </script>
+</body>
+</html>

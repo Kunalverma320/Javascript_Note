@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Practice</title>
+</head>
+<body>
+    
+<h1>a=10;</h1>
+
+
+<p>1. a++</p>
+<p id="first-result"></p>
+<input type="text" id="first">
+
+<p>2. a--</p>
+<p id="second-result"></p>
+<input type="text" id="second">
+
+<p>3. ++a</p>
+<p id="third-result"></p>
+<input type="text" id="third">
+
+<p>4. --a</p>
+<p id="fourth-result"></p>
+<input type="text" id="fourth">
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let a = 10;
+    
+            document.getElementById('first').addEventListener('keyup', function() {
+                let first = a++;
+                console.log(first);
+                document.getElementById('first-result').textContent = `Result: ${first}`;
+            });
+    
+            document.getElementById('second').addEventListener('keyup', function() {
+                let second = a--;
+                console.log(second);
+                document.getElementById('second-result').textContent = `Result: ${second}`;
+            });
+    
+            document.getElementById('third').addEventListener('keyup', function() {
+                let third = ++a;
+                console.log(third);
+                document.getElementById('third-result').textContent = `Result: ${third}`;
+            });
+    
+            document.getElementById('fourth').addEventListener('keyup', function() {
+                let fourth = --a;
+                console.log(fourth);
+                document.getElementById('fourth-result').textContent = `Result: ${fourth}`;
+            });
+        });
+    </script>
+</body>
+</html>

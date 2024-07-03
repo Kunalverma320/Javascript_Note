@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+<body>
+    
+    <div id="box" name="dghf"> hello</div>
+    <p id="idpara">This is a Paragraph</p>
+   
+    <script>
+//getattreibute 
+// let verma=document.querySelector("div");
+// console.log(verma);
+// let id=verma.getAttribute("id");
+// console.log(id);
+// let name=verma.getAttribute("name");
+// console.log(name);
+
+//setattribute
+
+// let name=document.querySelector("div");
+// console.log(name.setAttribute("id","hsd"));
+
+//aapend element
+
+let buttonmy=document.createElement("button");
+buttonmy.setAttribute("id","mybtn");
+buttonmy.innerHTML="Click Me ";
+
+
+let div=document.querySelector("div");
+div.prepend(buttonmy);
+
+// let para=document.querySelector("p");
+// para.append(buttonmy);
+// let btnwid=buttonmy.setAttribute("id","mybtn");
+// console.log(btnwid);
+
+
+
+    </script>
+</body>
+</html>

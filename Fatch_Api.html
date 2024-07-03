@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatch Api</title>
+</head>
+<body>
+    <button id="btn">Get Data</button>
+    <p id="call"></p>
+
+    <script>
+        const URL="https://cat-fact.herokuapp.com/facts/";
+        let putdata=document.querySelector("#call");
+        let btn=document.querySelector("#btn");
+
+//async method
+
+        // const getData = async () =>{
+        //     console.log("geting data ...........");
+        //     let response=await fetch(URL);
+        //     console.log(response);
+        //     let data=await response.json();
+        //     console.log(data);
+        //     putdata.innerHTML=data[0].text;
+
+        // }
+
+        // document.addEventListener("click",getData);
+
+        // (
+        //     async function ()
+        //     {
+        //     console.log("geting data ...........");
+        //     let response=await fetch(URL);
+        //     console.log(response);
+        //     let data=await response.json();
+        //     console.log(data[0].text);
+        //     putdata.innerHTML=data[0].text;
+        //     }
+
+        // )();
+
+// promise mathod 
+
+// function getData() {
+//     fetch(URL)
+//         .then((res) => res.json())
+//         .then((response) => {
+//             response.forEach((element) => {
+//                 console.log(element);
+//                 putdata.innerHTML=element.text;
+//             });
+//         })
+        
+// }
+
+// function getData()
+// {
+//     fetch(URL)
+//     .then((res)=>res.json())
+//     .then((data)=>console.log(data[0]));
+// }
+
+// document.addEventListener("click", getData);
+
+
+
+    </script>
+</body>
+</html>
